@@ -66,6 +66,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.androidx.multidex)
 
     // Dependency Injection
     implementation(libs.hilt.android)
@@ -80,4 +81,7 @@ dependencies {
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
     annotationProcessor(libs.room.compiler)
+
+    //splashScreen
+    implementation(libs.androidx.core.splashscreen)
 }

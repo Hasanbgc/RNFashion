@@ -2,6 +2,7 @@ package com.rnfashion.clothingapps.core.repositories.local
 
 import com.rnfashion.clothingapps.core.datasource.dao.UserDAO
 import com.rnfashion.clothingapps.core.datasource.entity.UserEntity
+import com.rnfashion.clothingapps.core.utils.DataState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
@@ -9,6 +10,15 @@ import javax.inject.Inject
 class UserRepository @Inject constructor(
     private val userDAO: UserDAO
 ): UserRepositoryInterface {
+    override suspend fun getUser(): Flow<DataState<UserEntity?>> {
+        return flow {
+            try {
+                emit(DataState.Success(userDAO.getUser()))
+            }catch (e: Exception){
+                emit(DataState.Error(e))
+            }
+        }
+    }
 
     override suspend fun insertUser(userEntity: UserEntity) : Flow<Boolean> {
         return flow {

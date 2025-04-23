@@ -7,7 +7,7 @@ import com.rnfashion.clothingapps.core.navigation.NavigationRoute
 
 fun NavGraphBuilder.OnBoardingNavigation(navHostController: NavHostController) {
     composable(NavigationRoute.OnBoarding.route) {
-       // OnBoardingScreen(navHostController)
+        OnBoardingScreen(navHostController)
     }
 
 }

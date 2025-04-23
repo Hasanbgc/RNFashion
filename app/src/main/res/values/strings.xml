@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RNFashion</string>
+    <string name="user_not_found">User not found</string>
 </resources>

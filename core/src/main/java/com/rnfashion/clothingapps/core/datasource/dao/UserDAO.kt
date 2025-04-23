@@ -12,6 +12,9 @@ interface UserDAO{
     @Insert(onConflict = OnConflictStrategy.Companion.REPLACE)
     suspend fun insertUser(userEntity: UserEntity)
 
+    @Query("SELECT * FROM ${Constant.Companion.USER_TABLE}")
+    suspend fun getUser(): UserEntity?
+
     @Query("SELECT * FROM ${Constant.Companion.USER_TABLE} WHERE email = :email")
     suspend fun getUserByEmail(email: String): UserEntity
 

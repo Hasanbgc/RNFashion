@@ -3,6 +3,7 @@ package com.rnfashion.clothingapps.core.datasource.entity
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import com.rnfashion.clothingapps.core.User
 import com.rnfashion.clothingapps.core.utils.Constant
 
 @Entity(tableName = Constant.Companion.USER_TABLE)
@@ -28,4 +29,19 @@ data class UserEntity(
     val token: String,
     @SerializedName("is_onboarding_complete")
     val isOnboardingComplete: Boolean
-)
+){
+    fun mapToUser(): User {
+        return User(
+            id = Id,
+            name = name,
+            email = email,
+            password = password,
+            phone = phone,
+            address = address,
+            isLogin = isLogin,
+            image = image,
+            token = token,
+            isOnboardingComplete = isOnboardingComplete
+        )
+    }
+}
