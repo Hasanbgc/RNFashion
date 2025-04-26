@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white_25">#3FFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="onboarding_background">#464447</color>
+    <color name="onboarding_component">#E7E8E9</color>
+    <color name="yello">#FFEB3B</color>
+
+
+</resources>

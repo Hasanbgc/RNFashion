@@ -16,7 +16,7 @@ import com.rnfashion.clothingapps.viewmodels.MainViewModel
 
 
 @Composable
-fun MainNaviHost(navController: NavHostController = rememberNavController(), route:String = NavigationRoute.OnBoarding.route){
+fun MainNaviHost(navController: NavHostController = rememberNavController(), route:String = NavigationRoute.Welcome.route){
 
     NavHost(navController = navController, startDestination = route){
         OnBoardingNavigation(navController)
